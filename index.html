@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Quotes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,7 +13,7 @@
     <h1>Love yourself!!</h1>
     </header>
     <main>
-        <form>
+        <form id="quote-generator-form">
             <input type="text" placeholder="Your quote here"
              autofocus
              required
@@ -21,9 +22,8 @@
              />
              <input type="submit" class="button"/>
         </form>
-        <div class="quote">
-            Love yourself first <br>
-            and everything else falls into line"
+        <div class="quote" id="quote">
+            
         </div>
     </main>
     <footer>
