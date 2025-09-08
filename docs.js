@@ -1,7 +1,8 @@
-function displayQuotes(response){
-  
+function displayQuote(response){
+  console.log("quote generated");
+
   new Typewriter("#quote", {
-    strings: response.data.quote,
+    strings: response.data.answer,
     autoStart: true,
     delay: 1,
     cursor: "",
@@ -15,7 +16,12 @@ function generateQuote(event){
     let context="You are a helpful assistant that generates self-love quotes, please generate a self-love quote based on the user's instructions. Make sure the quote is between 4 and 6 lines. And it is motivoting to the reader.";
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-    axios.get(apiUrl).then(displayQuotes);
+  console.log("generating quote");
+  console.log(`prompt: ${prompt}`);
+  console.log(`context: ${context}`);
+
+
+    axios.get(apiUrl).then(displayQuote);
 
 
 }
